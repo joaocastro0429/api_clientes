@@ -7,3 +7,16 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+# db/seeds.rb
+require 'faker'
+
+
+# Gere e salve 20 clientes fictícios
+20.times do
+  Client.create(
+    name: Faker::Name.name,
+    phone: Faker::PhoneNumber.phone_number,
+    cpf: Faker::IdNumber.brazilian_citizen_number
+  )
+end
