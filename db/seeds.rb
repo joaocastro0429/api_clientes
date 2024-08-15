@@ -12,11 +12,14 @@
 require 'faker'
 
 
-# Gere e salve 20 clientes fictícios
-20.times do
-  Client.create(
-    name: Faker::Name.name,
-    phone: Faker::PhoneNumber.phone_number,
-    cpf: Faker::IdNumber.brazilian_citizen_number
-  )
-end
+# # Gere e salve 20 clientes fictícios
+# 20.times do
+#   Client.create(
+#     name: Faker::Name.name,
+#     phone: Faker::PhoneNumber.phone_number,
+#     cpf: Faker::IdNumber.brazilian_citizen_number
+#   )
+# end
+
+
+Administrador.create(name:"joao",email:"joao@email.com",password:"123456")
